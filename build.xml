@@ -1,0 +1,55 @@
+<project basedir="." name="Test Automation">
+    <property name="src.dir" value="${basedir}/src"/>
+    <property name="classes.dir" value="${basedir}/classes/main"/>
+	<property name="test.dir" value="${basedir}/test"/>
+    <property name="lib.dir" value="${basedir}/lib"/>
+    <property name="build.dir" value="${basedir}/build"/>
+	<property name="testng.report.dir" value="${basedir}/test-output"/>
+    <property name="testautomation.jar" value="${build.dir}/testautomation.jar"/>
+
+    <path id="testautomation.classpath">
+        <file file="${testautomation.jar}"/>
+        <fileset dir="${lib.dir}">
+            <include name="*.jar" />
+        </fileset>
+    </path>
+
+    <target name="build" description="sets up the environment for test execution">
+    	<echo message="Hello build" />
+    	<delete dir="${classes.dir}"/>
+    	<delete dir="${build.dir}" />
+    	<delete dir="${testng.report.dir}" />
+        <mkdir dir="${classes.dir}"/>
+        <mkdir dir="${build.dir}"/>
+    	<mkdir dir="${testng.report.dir}" />
+        <javac debug="true"
+              srcdir="${src.dir}:${test.dir}"
+              destdir="${classes.dir}"
+              includeAntRuntime="false"
+              classpathref="testautomation.classpath"/>
+        <jar basedir="${classes.dir}" jarfile="${testautomation.jar}"/>
+    </target>
+
+    <target name="run-example" depends="build" description="run command-line example">
+        <java classname="com.example.src.WebFlip"
+               failonerror="true"
+               classpathref="testautomation.classpath"/>
+    </target>
+<!--	<taskdef resource="testngtasks" classpath="${lib.dir}/testng-6.0.1-nobsh-noguice.jar" /> -->
+	<taskdef name="testng" classname="org.testng.TestNGAntTask">
+	    <classpath>
+	      <pathelement location="${lib.dir}/testng-6.0.1-nobsh-noguice.jar"/>
+	    </classpath>
+	  </taskdef>
+
+	<target name="tests" depends="build">
+		<echo message="Hello, world" />
+	<testng classpathref="testautomation.classpath"
+	        outputDir="${testng.report.dir}"
+	        verbose="2">
+<!--     <classfileset dir="test" includes="**/*.class" />  -->
+		<xmlfileset dir="." includes="testng.xml" />
+
+	</testng>
+	</target>
+</project>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="22812" started-at="2012-11-28T12:05:20Z" finished-at="2012-11-28T12:05:43Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="22812" started-at="2012-11-28T12:05:20Z" finished-at="2012-11-28T12:05:43Z">
+      <class name="com.example.test.SimpleTest">
+        <test-method status="PASS" signature="before2()" name="before2" is-config="true" duration-ms="8" started-at="2012-11-28T12:05:20Z" finished-at="2012-11-28T12:05:20Z">
+        </test-method>
+        <test-method status="PASS" signature="before()" name="before" is-config="true" duration-ms="1" started-at="2012-11-28T12:05:20Z" finished-at="2012-11-28T12:05:20Z">
+        </test-method>
+        <test-method status="PASS" signature="f()" name="f" duration-ms="1" started-at="2012-11-28T12:05:20Z" finished-at="2012-11-28T12:05:20Z">
+        </test-method>
+        <test-method status="PASS" signature="after()" name="after" is-config="true" duration-ms="1" started-at="2012-11-28T12:05:20Z" finished-at="2012-11-28T12:05:20Z">
+        </test-method>
+        <test-method status="PASS" signature="before()" name="before" is-config="true" duration-ms="1" started-at="2012-11-28T12:05:20Z" finished-at="2012-11-28T12:05:20Z">
+        </test-method>
+        <test-method status="PASS" signature="after()" name="after" is-config="true" duration-ms="0" started-at="2012-11-28T12:05:20Z" finished-at="2012-11-28T12:05:20Z">
+        </test-method>
+        <test-method status="PASS" signature="f2()" name="f2" duration-ms="0" started-at="2012-11-28T12:05:20Z" finished-at="2012-11-28T12:05:20Z">
+        </test-method>
+        <test-method status="PASS" signature="before()" name="before" is-config="true" duration-ms="0" started-at="2012-11-28T12:05:20Z" finished-at="2012-11-28T12:05:20Z">
+        </test-method>
+        <test-method status="PASS" signature="sel()" name="sel" duration-ms="22794" started-at="2012-11-28T12:05:20Z" finished-at="2012-11-28T12:05:43Z">
+        </test-method>
+        <test-method status="PASS" signature="after()" name="after" is-config="true" duration-ms="1" started-at="2012-11-28T12:05:43Z" finished-at="2012-11-28T12:05:43Z">
+        </test-method>
+        <test-method status="PASS" signature="after2()" name="after2" is-config="true" duration-ms="0" started-at="2012-11-28T12:05:43Z" finished-at="2012-11-28T12:05:43Z">
+        </test-method>
+      </class>
+    </test>
+  </suite>
+</testng-results>

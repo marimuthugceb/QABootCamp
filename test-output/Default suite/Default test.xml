@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite hostname="ADMINMARI" name="com.example.test.SimpleTest" tests="3" failures="0" timestamp="28 Nov 2012 06:35:43 GMT" time="22.812" errors="0">
+  <testcase name="f" time="0.0010" classname="com.example.test.SimpleTest"/>
+  <testcase name="f2" time="0.0" classname="com.example.test.SimpleTest"/>
+  <testcase name="sel" time="22.794" classname="com.example.test.SimpleTest"/>
+</testsuite>
